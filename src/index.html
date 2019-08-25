@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Cifrado&Descifrado</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
+</head>
+
+<body>
+
+    <div id="root" align="center">
+        <form>
+            <h1>BIENVENIDOS A CLAVE SEGURA</h1>
+            <img src="https://github.com/marcelalopeznanco/imagenes/blob/master/candado%202.gif?raw=true">
+            <br>
+            <br>
+            <p>En esta app te ayudaremos a crear una contraseña mediante el cifrado cesar. Este consiste en sustituir una cantidad de letras por otras, mediante un numero de desplazamiento (offset) que lo determinaras según lo indiques, generando así una
+                clave mucho mas segura para tu uso personal.
+            </p>
+            <br>
+            <p>Por ejemplo, si usamos un desplazamiento ( offset ) de 3 posiciones:</p>
+            <br>
+            <p>- La letra A se cifra como D.</p>
+            <p>- La palabra CASA se cifra como FDVD.</p>
+            <br>
+            <h2>Instrucciones</h2>
+            <br>
+            <p>1. Ingresa tu numero de desplazamiento (sera la cantidad de espacios que se moverá cada letra dentro del alfabeto), que determinara el nivel de seguridad de tu código.</p>
+            <p>2. Ingresa tu clave a cifrar, maximo 10 digitos.</p>
+            <p>3. Obtendrás tu clave secreta, la cual podrás volver a ingresar (copiando y pegando) en el punto 2. para descifrar si así lo deseas.</p>
+            <br>
+            <footer>
+                <div id="comenzar">
+                    <button> <strong>CONTINUAR</strong> </button>
+                </div>
+            </footer>
+        </form>
     </div>
+
+    <div id="cesar" align="center">
+        <form>
+            <br>
+            <h4>INGRESA TUS DATOS</h4>
+            <br>
+            <!--<p>Ingresa el nivel de seguridad de tu código</p>-->
+            <label for="inputOffset">1. Selecciona nivel de seguridad</label>
+            <br>
+            <br>
+            <input type="number" id="inputOffset" placeholder="Numero de desplazamiento (Offset)  Ej: 1" name="quantity" min="1">
+            <br>
+            <br>
+            <br>
+            <p id="ingresatuClave">2. Ingresa máximo 10 dígitos</p>
+            <br>
+            <input type="text" id="inputTexto" maxlength="10" placeholder="Puedes ingresar sólo letras, exceptuando la `ñ`. " name="text-example" required>
+            <br>
+            <br>
+            <button id="cifrar">CIFRAR</button>
+            <button id="descifrar">DESCIFRAR</button>
+            <br>
+            <br>
+            <br>
+            <p id="resultado">3. Resultado</p>
+            <br>
+            <textarea id="textoEntregado" maxlength="10" placeholder="Esta es tu nueva clave secreta"></textarea>
+            <h3>Copia y pega tu clave secreta en el punto 2. para descifrarla</h3>
+            <br>
+            <br>
+            <button id="volver"> <strong>VOLVER A INSTRUCCIONES</strong> </button>
+
+        </form>
+    </div>
+
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
-  </body>
+</body>
+
 </html>
